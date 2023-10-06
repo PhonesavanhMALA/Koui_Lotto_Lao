@@ -1,0 +1,32 @@
+sk,sk-tk 	96
+xr,tr-xr 	50
+xr,sk-tk	03
+sk,xr-sk	32
+xr,sk-tk	74
+xr,xr-xr	65
+xr,xr-		57 saloup => xr
+
+*****************************
+
+sk,sk-tk
+xr,xr-xr
+xr,sk-tk
+sk,xr-sk
+xr,xr-xr
+
+
+**********r
+sk,sk-tk
+sk,sk-tr
+xr,sk-xr
+
+
+#####3
+tk,sk-tk
+tk-xr-sk
+tr-sk-tk
+tk-sk-tk
+tk-sk-tr
+tk-sk-xr
+
+

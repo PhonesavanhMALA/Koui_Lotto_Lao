@@ -1,0 +1,39 @@
+ສູດ4:
+tr,sk:sk	68,58
+tk,sk:xr	78,97
+tr,sk:xr	56,99
+tr,xr:tr	61,31
+tk,xr:tr	91,03
+tk,sk:tk	98,22
+tk,xr:sk	59,76
+tk,sk:tr	64,19
+tk,sk:xr	82,59
+tr,xr:tk	67,32
+tr,xr:xr	65,81
+tk,sk:"TK"	92,
+
+	
+
+	
+ສູດ3:
+xr,sk:sk 	= 68 => 58
+xr,sk:sk	= 58 => 56
+sk,sk:xr	
+sk,xr:sk	
+sk,sk:tr
+xr,xr:tk
+sk,sk:tr
+sk,xr:sk
+sk,sk:tr
+sk,xr:tr
+xr,xr:tr
+sk,sk:tr
+xr,sk:tr	= 76 => 45
+sk,sk:tr
+sk,sk:xr
+xr,xr:tr
+xr,xr:tk
+xr,xr:xr
+xr,xr:sk
+xr,sk:tk	= 58 => 38
+xr,sk:"TR"	= 92 =>	2

@@ -1,0 +1,34 @@
+### MONDAY 12-12-22
+*******************
+ເລືອກສະເພາະວັນຈັນ ສູດ-3 #################################################
+tk,tr:sk
+tk,tr:sk
+tr,tk:tk
+tk,tk:sk
+tr,tr:xr
+tk,xr:tr
+tr,tk:xr
+tk,tk:sk
+
+****************
+ວັນຈັນນັບລວມສູດ-3 #################################################
+tr,xr:tr
+tr,xr:sk
+tk,xr:sk
+tk,xr:sk
+tk,sk:tr
+tr,xr:xr
+tk,sk:tr
+tr,sk:xr
+tr,xr:tr
+tk,sk:tr
+tk,sk:sk
+tr,xr:tr
+tr,sk:tr
+tr,xr:tr
+tk,xr:xr
+tk,sk:sk
+tk,xr:sk
+tr,xr:xr
+tr,xr:xr
+tk,xr:"SK"

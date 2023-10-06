@@ -1,0 +1,36 @@
+** Mark3 FIlter = Monday
+tr,sk:xr
+tk,sk:tr
+tr,sk:tk
+tk,xr:sk
+tr,xr:sk
+tk,sk:tr
+tr,xr:tr
+tr,xr:tk
+tk,xr:sk
+tk,sk:"TR"
+
+** Mark3 Filter = NONE
+xr,xr:xr
+sr,xr:tk
+sk,sk:tk
+sk,sk:tk
+sk,sk:tk
+sk,xr:tk
+xr,xr:sk
+sk,sk:xr
+xr,xr:sk
+xr,sk:xr
+xr,xr:tr
+xr,xr:tk
+xr,xr:sk
+sk,sk:xr
+xr,xr:tr
+xr,sk:tk
+sk,sk:tk
+sk,xr:tr
+sk,sk:"TK"
+
+412152
+1245
+
