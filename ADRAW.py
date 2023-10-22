@@ -24,12 +24,13 @@ congrats = """ '   .----------------.  .----------------.  .-----------------. .
 ຕົວຢ່າງ: 429749, ນາມສັດ:25,06,03,09 ໃຫ້ເອົາເລກ9ໄປໃສ່ໃນ Container
 2.
 """
-
+TimeToday = datetime.now.strftime("%Y-%m-%d %H-%M-%S")
+print(TimeToday)
 
 #### x>2 and x<=3
 mustDraws = []
 
-mustDraws = ['748101', '933207', '500424', '804984', '709975', '071743', '339271', '179943', '329838', '149480', '472940', '309488', '326029', '283250', '389439', '354633', '351605', '353850', '303923', '002440', '198910', '893248', '716717', '742934', '919620', '539350', '841011', '470890', '454150', '104742', '490032', '374843', '342070', '348141', '451025', '497443', '450342', '718116', '188471', '413001', '732929', '746313', '527030', '337039', '023688', '911631', '372072', '821819', '888304', '891838', '311448', '534740', '543448', '531339', '733190', '457113', '831824', '709833', '411354', '139911', '782393', '884408', '278008', '891683', '051400', '354134', '039818', '424647', '088989', '706042', '916041', '320131', '016233', '540775', '109714', '887431', '712911', '414380', '076380', '739424', '302040', '543316', '838372', '919431', '143034', '741948', '288902', '477470', '733441', '493334', '893404', '343932', '746483', '130230', '109020', '308049', '391008', '813323', '050180', '533981', '733307', '034252', '520667', '328130', '327643', '240614', '534700', '459434', '731747', '204643', '899632', '201970', '307667', '711819', '180319', '088311', '838145', '483603', '178317', '731611', '044117', '821084', '333629', '173310', '521718', '200438', '807105', '378918', '742670', '248989', '840320', '332324', '732101', '894988', '828483', '400427', '403890', '822334', '483833', '010117', '240898', '441713', '840188', '472352', '939141', '286289', '407942', '239375', '452005', '800804', '319948', '317218', '002016', '310157', '473808', '711952', '848318', '304301', '744214', '071801', '484801', '889467', '818976', '730098', '270310', '182729', '393961', '822104', '043840', '727432', '893134', '022443', '831743', '934619', '488343', '102184']
+# mustDraws = ['447276', '314944', '836908', '844389', '454704', '983440', '112309', '233740', '893717', '829429', '524741', '883429', '302089', '827244', '898120', '194577', '345450', '701900', '716114', '703801', '303811', '416429', '309009', '277581', '707720', '354377', '939005', '934352', '000961', '340288', '107116', '236002', '714140', '441677', '300840', '024577', '400218', '988320', '496189', '841190', '984980', '718300', '884716', '931776', '522109', '423624', '109889', '705067', '440801', '436410', '499217', '073510', '337108', '038389', '001302', '324116', '889890', '470120', '737167', '743719', '071884', '456467', '131804', '079718', '913329', '112000', '422524', '180298', '919948', '443550', '984491', '424802', '474380', '989150', '393025', '787420', '780688', '027448', '277149', '892717', '932308', '408020', '342520', '704877', '825400', '429141', '344081', '824708', '820042', '840250', '341898', '341488', '043018', '317788', '179198', '019671', '238305', '730502', '507520', '021905', '493410', '930717', '055319', '233777', '338919', '702980', '741810', '054009', '494408', '522540', '014519', '429919', '350552', '347498', '471844', '812400', '529819', '848190', '203820', '522504', '076791', '289791', '700850', '892608', '474398', '014484', '177771', '840518', '837244', '358040', '406429', '910371', '520904', '308349', '446311', '001677', '357318', '180480', '102418', '898801', '892508', '001804', '398314', '804542', '774510', '934818', '982661', '440790', '230316', '053740', '916498', '807741', '333829', '374544', '502611', '847900', '271791', '343529', '419300', '285498', '910890', '289700', '076724', '452349', '350544', '084017', '784908', '198867', '331149', '111742', '439416', '010941', '324748', '177581', '749349', '780300']
 def THEDRAW(mustDraws):
     
     CheckMustDraw = False
@@ -64,7 +65,9 @@ def THEDRAW(mustDraws):
     # container = ['1','2','3','4','5','6','7','8','9','0'] 
     # contain_LUK = ['1','2','3','4','5','6','7','8','9','0'] 
     # container = ['9']
-    contain_LUK = ['5','6','ຄຫ']
+    # contain_LUK = ['0','1','2','3','4','5']
+    contain_LUK = []
+    fullLuk =   [5,6,7,9]
     # Special_LIKE = ['27','67','29','69','36','35','75','76','09','49','80','89','39','79','24','64','23','63','40']
     # print(L_DrawToday)
     MainData = pd.read_excel('Double_Sixdigit_V1.xlsx',converters={'Six_DigitNumber':str})
@@ -73,6 +76,13 @@ def THEDRAW(mustDraws):
     Adraw_Excel_Nar = pd.read_excel('ADRAW.xlsx',sheet_name="Nar",converters={'Six_DigitNumber':str})
     
     
+
+    ### loop to get luk
+    for l in fullLuk:
+        contain_LUK.append(str(l))
+
+    print(contain_LUK)
+    # return
     ### Get last two number
     MainData['Stateright'] = MainData['Six_DigitNumber'].str[-2:]
     ### filter even or odd
@@ -221,7 +231,9 @@ def THEDRAW(mustDraws):
             g_second = str(theDraw[1])
             g_third = str(theDraw[2])
             
-            
+            # if '787336' in (L_MainData):
+            #     print("working stop here....")
+            #     break
             
             g_LUK = theDraw[3]
             g_last = theDraw[-1]
@@ -308,7 +320,7 @@ def THEDRAW(mustDraws):
                 
                 
                 # if (g_Twodigit in L_DrawToday) and (g_lang in L_LangDraws) and (g_first_two in L_NarDraws):
-                if (g_Twodigit in L_DrawToday) and (g_lang in L_LangDraws):
+                if (g_Twodigit in L_DrawToday) and (g_LUK in contain_LUK):
                 # if Jlouse >= 1 and (g_Twodigit in L_DrawToday and g_LUK in contain_LUK):
                     isIn_Container = True
                 # if(gF == True and gS == True and gT == True) and (g_Twodigit in L_DrawToday) and (g_LUK in contain_LUK):
@@ -386,11 +398,12 @@ def THEDRAW(mustDraws):
             
             for val in limited_Number:
                 print(type(val))
+                val = '180189'
                 if val in mustDraws:
                     with open('EXCEL/onlyDraw.txt', mode="a") as lucky:
-                        lucky.write(f"{val}\n\n{limited_Number}")
+                        lucky.write(f"The draw must be = {val}\n\nAll list from limit number{limited_Number}")
                     CheckMustDraw = True
-                    os.system("shutdown /s /t 1")
+                    # os.system("shutdown /s /t 1")
                     break
                 if val not in mustDraws:
                     with open('EXCEL/Life_Draw_2Day.txt', mode="w") as lucky:
@@ -404,13 +417,25 @@ def THEDRAW(mustDraws):
             theDrawDictionary = {
                 "DRAW SixDigit":limited_Number,
             }
+
             mustDraws += limited_Number
+            ### second dictionary all draws
+            mustDrawDictionary = {
+            "Must Draws": mustDraws
+            }
+
+
             with open('EXCEL/Checkllist.txt', mode="w") as lucky:
-                lucky.write(f"\n\n{mustDraws}")
-            ### Convert to dataframe
+                lucky.write(f"{mustDraws}")
+
+            with open('EXCEL/THEDRAWS_LIST.txt', mode="a") as lucky:
+                lucky.write(f"{limited_Number}\n\n")
+            ### Convert to dataframec
             dataframe = pd.DataFrame(theDrawDictionary)
+            DF_MustDraws = pd.DataFrame(mustDrawDictionary)
             ### Export to excel
             dataframe.to_excel(f'282859/01THEDRAW.xlsx', index=False, header=True, sheet_name="DATA")
+            DF_MustDraws.to_excel(f'282859/01DF_MustDraws {TimeToday}.xlsx', index=False, header=True, sheet_name="MustDraws")
             print("FINISH THEDRAW")
             print(len(storeList))
             print(mustDraws)
@@ -419,9 +444,10 @@ def THEDRAW(mustDraws):
             print(congrats)
             
             
-            time.sleep(180)
+            # os.system("shutdown /s /t 1")
+            time.sleep(256)
             THEDRAW(mustDraws)
-            return
+            # return
 THEDRAW(mustDraws)
 
 ### To shutdown after finish running
